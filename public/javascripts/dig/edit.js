@@ -46,7 +46,12 @@ Ext.onReady(function() {
     digextent = refLayerBounds.transform(map.displayProjection, map.projection);
     var extent = digextent;
 
-    map.addLayers([googleSat,mapnik_d,googleMaps,googleHybrid]);
+    var myGoogleSat = new OpenLayers.Layer.Google(
+                              "Google Satellite",
+                              {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
+                          )
+
+    map.addLayers([myGoogleSat,mapnik_d,googleMaps,googleHybrid]);
 
     map.addLayer(refLayer);
 

@@ -77,8 +77,13 @@ function init() {
       to_map.addLayer(get_map_layer(layers_array[i]));
     }
 
+    var myGoogleSat = new OpenLayers.Layer.Google(
+                          "Google Satellite",
+                          {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
+                      );
 
-    to_map.addLayers([googleSat,googleMaps,googleHybrid]);
+
+    to_map.addLayers([myGoogleSat,googleMaps,googleHybrid]);
 
     if (map_has_bounds) {
       map_bounds_merc = new OpenLayers.Bounds();

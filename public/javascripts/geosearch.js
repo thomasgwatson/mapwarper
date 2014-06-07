@@ -41,7 +41,13 @@ function searchmapinit(){
   searchmap = new OpenLayers.Map('searchmap', options_warped);
   // create OSM layer
   mapnik_s = mapnik.clone();
-  searchmap.addLayers([googleSat,mapnik_s,googleMaps,googleHybrid]);
+
+  var myGoogleSat = new OpenLayers.Layer.Google(
+                          "Google Satellite",
+                          {type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 22}
+                      )
+
+  searchmap.addLayers([myGoogleSat,mapnik_s,googleMaps,googleHybrid]);
 
   //set up the map index layer to help find individual maps
     var mapIndexLayerStyle = OpenLayers.Util.extend({
