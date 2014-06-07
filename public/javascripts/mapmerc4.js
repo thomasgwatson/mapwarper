@@ -49,11 +49,13 @@ function init() {
         units: "m",
         numZoomLevels: 20,
         maxResolution: 156543.0339,
-        maxExtent: new OpenLayers.Bounds( - 20037508, -20037508, 20037508, 20037508.34),
-        controls: [ new OpenLayers.Control.Attribution(), to_layer_switcher, new OpenLayers.Control.PanZoomBar()]
+        maxExtent: new OpenLayers.Bounds( - 20037508, -20037508, 20037508, 20037508.34)
     };
 
     to_map = new OpenLayers.Map('to_map', options);
+    to_map.addControl(new OpenLayers.Control.Attribution());
+    to_map.addControl(to_layer_switcher, new OpenLayers.Control.PanZoomBar());
+    to_map.addControl(new OpenLayers.Control.PanZoomBar());
 
      warped_layer = new OpenLayers.Layer.WMS.Untiled("warped map", wms_url, {
         format: 'image/png',
