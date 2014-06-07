@@ -50,7 +50,7 @@ function warpedinit(){
    // jpl_wms3 = jpl_wms.clone();
    // warpedmap.addLayer(jpl_wms3);
 
-   var gms = new OpenLayers.Layer.Google("Google Satellite", {type: G_SATELLITE_MAP, 'sphericalMercator': true});
+   var gms = new OpenLayers.Layer.Google("Google Satellite", {type: google.maps.MapTypeId.SATELLITE, 'sphericalMercator': true});
    var gmr = new OpenLayers.Layer.Google("Google Streets", {'sphericalMercator': true});
    var gmh = new OpenLayers.Layer.Google("Google Hybrid", {type: G_HYBRID_MAP, 'sphericalMercator': true});
 
