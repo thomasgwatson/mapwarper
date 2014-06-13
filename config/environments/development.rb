@@ -1,13 +1,13 @@
 # Settings specified here will take precedence over those in config/environment.rb
 SITE_URL = "ec2-54-200-182-131.us-west-2.compute.amazonaws.com"
 SITE_NAME = "warper basic"
-SITE_EMAIL = "ummm@words.com"
+SITE_EMAIL = "bytheshoreline@hushmail.com"
 MAPSERVER_URL = "/mapserv"  #url to the mapserv executable
 
 #paths to directories to put various files in
-#SRC_MAPS_DIR = "/var/lib/maps/src/"
-#DEST_MAPS_DIR = "/var/lib/maps/maps/dest/"
-#TILEINDEX_DIR = "/var/lib/maps/dest/tileindex/"
+SRC_MAPS_DIR = "/var/lib/maps/src/"
+DEST_MAPS_DIR = "/var/lib/maps/dest/"
+TILEINDEX_DIR = "/var/lib/maps/dest/tileindex/"
 
 #MAX_DIMENSION =  1500
 #MAX_ATTACHMENT_SIZE = 100.megabytes
@@ -33,14 +33,13 @@ config.whiny_nils = true
 config.action_controller.consider_all_requests_local = true
 config.action_view.debug_rjs                         = true
 
-
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
 
-GDAL_PATH  = "$HOME/FWTools-2.0.6/bin_safe/"
-#GDAL_PATH  = ""
-GOOGLE_ANALYTICS_CODE = "UA-12240034-2"
-GOOGLE_ANALYTICS_COOKIE_PATH = "/warper-dev/"
-Yahoo_app_id = "lbQ2VNLV34EoEmxF9dguamWEFSXjI7adJ.ACHkdChT2JGmQ0Bj.jP1cF0nmh5XP3"
+GDAL_PATH  = "/usr/bin/"
+#GDAL_PATH  = "$HOME/FWTools-2.0.6/bin_safe/"
+GOOGLE_ANALYTICS_CODE = ""
+GOOGLE_ANALYTICS_COOKIE_PATH = ""
+Yahoo_app_id = ""
 ADDTHIS_USER = "gis"
-ADDTHIS_TWITTER_USER = "mapwarper"
+ADDTHIS_TWITTER_USER = ""
